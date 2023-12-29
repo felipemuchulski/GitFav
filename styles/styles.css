@@ -1,0 +1,20 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    font-size: 62.5%;
+
+    --ff-primary: 'Roboto', sans-serif;
+    --ff-null-tr:  'Roboto Mono', monospace;
+
+    --bg-color: black;
+    --bg-input: #06181C;
+    --bg-button-fv: #065E7C;
+    --bg-button-rm: #F75A68;
+    --text-button: #FFF;
+    --text-placeholder: #7C7C8A;
+    --text-color-tb: #e1e1e6;
+}
