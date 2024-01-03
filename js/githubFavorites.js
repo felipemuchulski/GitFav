@@ -54,9 +54,11 @@ export class FavoritesView extends Favorites {
   constructor(root) {
     super(root);
 
+    this.change = this.root.querySelector("#noFavorites");
     this.tbody = this.root.querySelector("table tbody");
     this.update();
     this.onadd();
+    this.noFavorites();
   }
 
   onadd(){
@@ -70,6 +72,7 @@ export class FavoritesView extends Favorites {
 
   update() {
     this.removeAllTr();
+    this.noFavorites();
 
     this.entries.forEach((user) => {
         const row = this.createRow();
@@ -90,9 +93,18 @@ export class FavoritesView extends Favorites {
         }
      }
      this.tbody.append(row);
+     this.noFavorites();
     })
   }
 
+  noFavorites () {
+
+    if(this.entries.length === 0) {
+        this.change.style.display = 'flex';
+    } else {
+        this.change.style.display = 'none';
+    }
+  }
   createRow() {
     //declarada criação de uma linha;
     const tr = document.createElement("tr");
