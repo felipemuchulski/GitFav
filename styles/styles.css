@@ -102,12 +102,15 @@ header .img-inicio {
   
 }
 
-table {
+ table {
+  height: 62.5rem;
   border-collapse: collapse;
   display: flex;
   flex-direction: column;
+  overflow: hidden;
 
   border: 1px solid #4A808C;
+  border-radius: 1.2rem;
 }
 
 table * {
@@ -135,6 +138,27 @@ table th:not(:first-child) {
   width: 218px;
   text-align: start;
 }
+
+ tbody {
+  overflow-y:scroll; 
+}
+
+ tbody::-webkit-scrollbar {
+  width: 0.6rem;
+  height: 0.6rem;
+  padding-left: 5rem;
+
+  border-radius: 1rem;
+  background: none;
+}
+
+
+
+ tbody::-webkit-scrollbar-thumb {
+  background-color: #4A808C;
+  border-radius: 6px;
+}
+
 
 tbody tr {
   width: 1120px;
